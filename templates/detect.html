@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detect Intrusion</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">IDS Security</div>
+
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/detect">Detect</a></li>
+</ul>
+</nav>
+
+<div class="card">
+
+<h1>Network Traffic Analysis</h1>
+
+<form action="/predict" method="post">
+
+<input type="number" name="duration" placeholder="Duration">
+
+<select name="protocol">
+<option value="">Protocol Type</option>
+<option>tcp</option>
+<option>udp</option>
+<option>icmp</option>
+</select>
+
+<select name="service">
+<option value="">Service</option>
+<option>http</option>
+<option>ftp_data</option>
+<option>smtp</option>
+</select>
+
+<select name="flag">
+<option value="">Flag</option>
+<option>SF</option>
+<option>S0</option>
+<option>REJ</option>
+</select>
+
+<input type="number" name="src_bytes" placeholder="Source Bytes">
+
+<input type="number" name="dst_bytes" placeholder="Destination Bytes">
+
+<input type="number" name="land" placeholder="Land">
+
+<input type="number" name="wrong_fragment" placeholder="Wrong Fragment">
+
+<input type="number" name="urgent" placeholder="Urgent">
+
+<button class="main-btn">Detect Intrusion</button>
+
+</form>
+
+</div>
+
+<footer>
+<p>Enter network parameters for prediction</p>
+</footer>
+
+</body>
+</html>

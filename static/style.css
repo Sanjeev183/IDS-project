@@ -1,0 +1,157 @@
+body{
+margin:0;
+font-family:Segoe UI, sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+}
+
+/* Navbar */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:#020617;
+box-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.8;
+}
+
+/* Card */
+
+.card{
+width:500px;
+margin:80px auto;
+background:#111827;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+text-align:center;
+}
+
+/* Form */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,select{
+padding:12px;
+border:none;
+border-radius:6px;
+background:#1f2937;
+color:white;
+}
+
+input::placeholder{
+color:#9ca3af;
+}
+
+/* Button */
+
+.main-btn{
+margin-top:10px;
+padding:12px;
+border:none;
+background:#38bdf8;
+color:black;
+font-weight:bold;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.main-btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
+
+/* Result */
+
+.result{
+margin:20px 0;
+padding:20px;
+background:#020617;
+border-radius:8px;
+font-size:22px;
+color:#38bdf8;
+}
+
+/* Tags */
+
+.tags span{
+background:#38bdf8;
+color:black;
+padding:6px 10px;
+border-radius:5px;
+margin:5px;
+display:inline-block;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:80px;
+background:#020617;
+font-size:14px;
+opacity:0.8;
+}
+
+.team{
+margin-top:20px;
+background:#020617;
+padding:20px;
+border-radius:8px;
+}
+
+.team h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.team p{
+margin:5px 0;
+}
