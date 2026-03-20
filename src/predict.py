@@ -1,9 +1,9 @@
 import joblib
 import pandas as pd
 
-# ================================
+
 # Load model and encoders once
-# ================================
+
 model = joblib.load("model/ids_model.pkl")
 encoders = joblib.load("model/encoder.pkl")
 
@@ -12,9 +12,9 @@ service_encoder = encoders["service"]
 flag_encoder = encoders["flag"]
 label_encoder = encoders["label"]
 
-# ================================
+
 # Prediction function
-# ================================
+
 def predict_intrusion(input_data):
     """
     input_data: dict with keys -
@@ -38,9 +38,9 @@ def predict_intrusion(input_data):
     # Convert input to DataFrame
     input_df = pd.DataFrame([input_data], columns=columns)
 
-    # ================================
+
     # Encode categorical features
-    # ================================
+    
     try:
         input_df["protocol_type"] = protocol_encoder.transform(input_df["protocol_type"])
         input_df["service"] = service_encoder.transform(input_df["service"])
@@ -49,9 +49,9 @@ def predict_intrusion(input_data):
         # This happens if a category was not seen during training
         return f"Error: Invalid categorical input! ({e})"
 
-    # ================================
+  
     # Make prediction
-    # ================================
+  
     result = model.predict(input_df)
 
     # Predict probability for confidence
